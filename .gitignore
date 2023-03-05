@@ -16,7 +16,7 @@ var/
 .installed.cfg
 *.egg
 .env
-static
+frontend
 # Serverless directories
 .serverless
 .venv
