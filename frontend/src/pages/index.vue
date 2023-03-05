@@ -1,0 +1,4 @@
+<template>
+  <AppNotifier/>
+  <AppMessages/>
+</template>
