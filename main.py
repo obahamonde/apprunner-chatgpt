@@ -46,9 +46,8 @@ async def chats(sub:str):
 
 app.mount("/", static, name="static")
 
-"""
+
 @app.on_event("startup")
 async def startup():
     User.provision()
     ChatGPT.provision()
-"""

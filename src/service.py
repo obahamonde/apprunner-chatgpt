@@ -10,7 +10,7 @@ class ChatGPTService:
                 "Content-Type": "application/json"
         }
         
-    async def complete(self, prompt: str, tokens:int=128, temperature:float=0.9)->str:
+    async def complete(self, prompt: str, tokens:int=512, temperature:float=0.9)->str:
         async with AsyncClient() as client:
             response = await client.post(
                 self.url,
