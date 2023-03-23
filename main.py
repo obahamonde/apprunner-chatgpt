@@ -51,3 +51,8 @@ app.mount("/", static, name="static")
 async def startup():
     User.provision()
     ChatGPT.provision()
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=3000, reload=True)
