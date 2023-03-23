@@ -20,7 +20,7 @@ app.add_middleware(
 
 
 @app.get("/api/completion")
-async def completion(q:str,sub:str,tokens:int=128):
+async def completion(q:str,sub:str,tokens:int=256):
     service = ChatGPTService()  
     response = await service.complete(q,tokens)
     ChatGPT(sub=sub,sender="user",message=q).create()
