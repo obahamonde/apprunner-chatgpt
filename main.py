@@ -3,10 +3,7 @@ from fastapi.responses import JSONResponse, PlainTextResponse
 from src.schemas import User, ChatGPT
 from src.service import ChatGPTService, AuthService
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
 from faunadb import query as q
-
-static = StaticFiles(directory="static", html=True)
 
 app = FastAPI()
 
@@ -43,8 +40,6 @@ async def chats(sub:str):
         return [r["data"] for r in response]
     except:
         return []
-
-app.mount("/", static, name="static")
 
 
 @app.on_event("startup")
