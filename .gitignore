@@ -19,3 +19,4 @@ frontend
 .serverless
 .venv
 .pytest_cache
+frontend
